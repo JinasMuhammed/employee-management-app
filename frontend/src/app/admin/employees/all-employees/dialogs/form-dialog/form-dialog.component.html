@@ -1,0 +1,123 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="modalTitle">{{ dialogTitle }}</div>
+    <button mat-icon-button mat-dialog-close class="modal-close-button" aria-label="Close dialog" type="button">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <div mat-dialog-content>
+    <form class="m-4" [formGroup]="employeeForm" (ngSubmit)="submit()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required>
+            <mat-error *ngIf="employeeForm.get('firstName')?.hasError('required')">First Name is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 mb-3">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" required>
+            <mat-error *ngIf="employeeForm.get('lastName')?.hasError('required')">Last Name is required</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+            <mat-error *ngIf="employeeForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 mb-3">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password" required>
+            <mat-error *ngIf="employeeForm.get('password')?.hasError('required')">Password is required</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+<div class="row">
+  <div class="col-md-6 mb-3">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Department</mat-label>
+      <mat-select formControlName="departmentId" required>
+        <mat-option *ngFor="let dept of departments" [value]="dept.id">
+          {{ dept.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="employeeForm.get('departmentId')?.hasError('required')">
+        Required
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Designation</mat-label>
+      <mat-select formControlName="designationId" required>
+        <mat-option *ngFor="let des of designations" [value]="des.id">
+          {{ des.title }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="employeeForm.get('designationId')?.hasError('required')">
+        Required
+      </mat-error>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 mb-3">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Role</mat-label>
+      <mat-select formControlName="roleId" required>
+        <mat-option *ngFor="let role of roles" [value]="role.id">
+          {{ role.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="employeeForm.get('roleId')?.hasError('required')">
+        Required
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+
+    <div class="col-md-6 mb-3">
+ <mat-form-field appearance="outline" class="w-100">
+  <mat-label>Phone</mat-label>
+  <input matInput formControlName="phone" required>
+  <mat-error *ngIf="employeeForm.get('phone')?.hasError('required')">
+    Phone number is required
+  </mat-error>
+  <mat-error *ngIf="employeeForm.get('phone')?.hasError('pattern')">
+    Enter a valid 10-digit number
+  </mat-error>
+</mat-form-field>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-3">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Date of Joining</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dateOfJoining" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="employeeForm.get('dateOfJoining')?.hasError('required')">
+        Required
+      </mat-error>
+    </mat-form-field>
+  </div>
+</div>
+      <mat-dialog-actions align="end" class="mt-4">
+        <button mat-flat-button color="primary" type="submit" [disabled]="employeeForm.invalid">Save</button>
+        <button mat-button mat-dialog-close type="button">Cancel</button>
+      </mat-dialog-actions>
+    </form>
+  </div>
+</div>

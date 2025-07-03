@@ -1,0 +1,37 @@
+{
+  "LOGIN": {
+    "TITLE": "Welcome to Smart"
+  },
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "Main"
+    },
+ 
+    "DASHBOARD": {
+      "TEXT": "Dashboard",
+      "LIST": {
+       
+      }
+    },
+    "EMPLOYEES": {
+      "TEXT": "Employees",
+      "LIST": {
+        "ALL-EMPLOYEES": "All Employees"
+     
+      }
+    },
+
+
+ "EMPLOYEE": {
+      "TEXT": "Dashboard",
+      "LIST": {
+   
+      }
+    }
+ 
+
+ 
+    }
+ 
+  }
+

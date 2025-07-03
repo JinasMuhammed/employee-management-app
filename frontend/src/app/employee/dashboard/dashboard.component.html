@@ -1,0 +1,77 @@
+
+
+<section class="content">
+  <div class="content-block">
+    @for (breadscrum of breadscrums; track breadscrum) {
+    <div class="block-header">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    }
+    <div class="row clearfix">
+
+          <div class="m-b-20">
+           
+             <div class="col-lg-12 col-md-12">
+        <div class="card">
+          <mat-tab-group>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon msr-2">face</mat-icon>
+                About Me
+              </ng-template>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="project_widget">
+                 
+                  <div class="body">
+                    <div class="row">
+                      <div class="col-md-2 col-6 b-r">
+                        <strong>Full Name</strong>
+                        <br>
+                        <p class="text-muted">{{employee.firstName+" "+employee.lastName}}</p>
+                      </div>
+                    
+                      <div class="col-md-2 col-6 b-r">
+                        <strong>Email</strong>
+                        <br>
+                        <p class="text-muted">{{employee.email}}</p>
+                      </div>
+                       <div class="col-md-2 col-6 b-r">
+                        <strong>Phone</strong>
+                        <br>
+                        <p class="text-muted">{{employee.phone}}</p>
+                      </div>
+                      <div class="col-md-2 col-6">
+                        <strong>Designation</strong>
+                        <br>
+                        <p class="text-muted"> {{employee.designationTitle}}</p>
+                      </div>
+                      <div class="col-md-2 col-6">
+                        <strong>Department </strong>
+                        <br>
+                        <p class="text-muted"> {{employee.departmentName}}</p>
+                      </div>
+                       <div class="col-md-2 col-6">
+                        <strong>Date of Joining </strong>
+                        <br>
+                        <p class="text-muted"> {{employee.dateOfJoining | date:'MM-dd-yyyy'}}</p>
+                      </div>
+                    </div>
+              
+                    <br>
+                  </div>
+                </div>
+              </div>
+
+            </mat-tab>
+
+          </mat-tab-group>
+        </div>
+      </div>
+          </div>
+        </div>
+   
+      </div> 
+ 
+</section>

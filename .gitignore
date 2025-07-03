@@ -1,0 +1,62 @@
+# =====================================
+# Repo-wide
+# =====================================
+# IDE folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# =====================================
+# Backend (.NET Core)
+# =====================================
+# Build outputs
+backend/**/bin/
+backend/**/obj/
+
+# EF Core Migrations snapshots are code—keep them!
+# Do NOT ignore: backend/*/Migrations/
+
+# User-specific files
+**/*.user
+**/*.suo
+**/*.vs/
+
+# LocalDB / SQL Server files
+backend/**/*.mdf
+backend/**/*.ldf
+
+# Secret storage (if you ever use it)
+backend/secrets.json
+backend/appsettings.*.Secret.json
+
+# =====================================
+# Frontend (Angular / Node)
+# =====================================
+# Angular CLI cache & workspace
+frontend/.angular/
+
+# Bundled output
+frontend/dist/
+frontend/build/
+
+# Dependencies
+frontend/node_modules/
+
+
+# ESLint cache
+frontend/.eslintcache
+
+# Test coverage
+frontend/coverage/
+
+# Environment files
+frontend/*.env
+frontend/*.local
+
+

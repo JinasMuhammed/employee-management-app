@@ -1,0 +1,72 @@
+<section class="content">
+  <div class="content-block">
+    @for (breadscrum of breadscrums; track breadscrum) {
+    <div class="block-header">
+  
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    }
+    <div class="row">
+      <div class="col-lg-4 col-sm-12">
+        <app-order-info-box title="Total Employees" value="2347" 
+          iconClass="fas fa-user-tie" bgClass="bg-c-blue">
+        </app-order-info-box>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <app-order-info-box title="Total Departments" value="258" 
+          iconClass="fas fa-graduation-cap" bgClass="bg-c-green">
+        </app-order-info-box>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <app-order-info-box title="Total Designations" value="27" 
+          iconClass="fas fa-graduation-cap" bgClass="bg-c-yellow">
+        </app-order-info-box>
+      </div>
+  
+    </div>
+    <!-- <div class="row clearfix">
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <app-report-card-widget [heading]="'Fees Collection Report'" [todayCount]="105" [weekCount]="825"
+          [monthCount]="22067" [progressPercentage]="74" progressColor="orange">
+        </app-report-card-widget>
+        <app-report-card-widget [heading]="'New Admission Report'" [todayCount]="107" [weekCount]="268"
+          [monthCount]="847" [progressPercentage]="74" progressColor="green">
+        </app-report-card-widget>
+      </div>
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Teacher Performance</h2>
+            <button mat-icon-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>add_circle_outline</mat-icon>
+                <span>Add</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>delete_outline</mat-icon>
+                <span>Delete</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>refresh</mat-icon>
+                <span>Refresh</span>
+              </button>
+            </mat-menu>
+          </div>
+          <div class="body">
+            <apx-chart [series]="lineChartOptions.series!" [chart]="lineChartOptions.chart!"
+              [xaxis]="lineChartOptions.xaxis!" [stroke]="lineChartOptions.stroke!" [colors]="lineChartOptions.colors!"
+              [dataLabels]="lineChartOptions.dataLabels!" [legend]="lineChartOptions.legend!"
+              [tooltip]="lineChartOptions.tooltip!" [markers]="lineChartOptions.markers!"
+              [grid]="lineChartOptions.grid!" [yaxis]="lineChartOptions.yaxis!">
+            </apx-chart>
+          </div>
+        </div>
+      </div>
+    </div> -->
+   
+  </div>
+</section>

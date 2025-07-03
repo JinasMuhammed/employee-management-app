@@ -1,0 +1,88 @@
+@use "@angular/material" as mat;
+:host ::ng-deep .btnStyle1 {
+  @include mat.button-overrides(
+    (
+      filled-container-color: #0b8400,
+      filled-label-text-color: #ffffff,
+    )
+  );
+}
+:host ::ng-deep .btnStyle2 {
+  @include mat.button-overrides(
+    (
+      filled-container-color: #fd7e14,
+      filled-label-text-color: #ffffff,
+    )
+  );
+}
+
+:host ::ng-deep .btnStyle3 {
+  @include mat.button-overrides(
+    (
+      filled-container-color: #0d6efd,
+      filled-label-text-color: #ffffff,
+    )
+  );
+}
+
+:host ::ng-deep .btnStyle4 {
+  @include mat.button-overrides(
+    (
+      filled-container-color: #dc3545,
+      filled-label-text-color: #ffffff,
+    )
+  );
+}
+
+.signin-wrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+  padding: 16px;
+}
+
+.signin-card {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+  mat-card-header {
+    background: #3f51b5;
+    color: white;
+    text-align: center;
+
+    mat-card-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  mat-card-content {
+    padding: 24px;
+
+    .full-width {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .error {
+      color: #f44336;
+      margin: 8px 0;
+      text-align: center;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
