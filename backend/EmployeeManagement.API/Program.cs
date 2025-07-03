@@ -10,7 +10,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularDev",
         policy => policy
-            .WithOrigins("http://localhost:5000")   // your Angular app
+            .WithOrigins("http://localhost:5000", "http://localhost:4200")   
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials()
@@ -43,7 +43,7 @@ builder.Services.AddAuthorization(p =>
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
