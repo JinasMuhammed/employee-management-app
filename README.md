@@ -131,25 +131,7 @@ This repository contains a full-stack Employee Management application:
 * **Frontend**: `src/environments/environment.ts` for API URL and feature flags.
 * **CORS**: In your `Program.cs`, enable CORS to allow your frontend origin. For example:
 
-  ```csharp
-  // in builder
-  builder.Services.AddCors(options =>
-  {
-    options.AddPolicy("LocalDev", policy =>
-      policy.WithOrigins(
-        "http://localhost:50000",  // port used by Swagger UI
-        "http://localhost:4200"    // default Angular CLI port
-      )
-      .AllowAnyMethod()
-      .AllowAnyHeader()
-    );
-  });
 
-  var app = builder.Build();
-
-  // before MapControllers()
-  app.UseCors("LocalDev");
-  ```
 
   > **Tip:** If your Angular app runs on a different port (e.g. `http://localhost:5000` or any other), just add that URL to the `WithOrigins(...)` list to avoid CORS errors.csharp
   > // in builder
