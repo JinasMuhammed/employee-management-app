@@ -189,7 +189,13 @@ dotnet ef database update
 * **CORS**: If encountering CORS errors, ensure `app.UseCors(...)` is configured in `Program.cs`.
 
 ---
+## Running Unit Tests
 
+To run the backend unit tests:
+
+```bash
+cd backend
+dotnet test 
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
