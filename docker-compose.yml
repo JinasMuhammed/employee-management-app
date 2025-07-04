@@ -1,0 +1,27 @@
+
+
+services:
+  api:
+    build:
+      context: ./backend/EmployeeManagement.API
+      dockerfile: Dockerfile
+    ports:
+      - "7016:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=host.docker.internal,1433;Database=EmployeeMgmt;User Id=YOUR_USER;Password=YOUR_PASS;
+    networks:
+      - ems-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    networks:
+      - ems-network
+
+networks:
+  ems-network:
+    driver: bridge
